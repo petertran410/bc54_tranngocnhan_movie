@@ -3,10 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 export default function Header() {
-  // useNavigate dùng để điều hướng trang không gây reload
   let navigate = useNavigate();
-
-  // lấy dữ liệu từ redux về
   let user = useSelector((state) => state.userReducer.user);
   console.log(user);
 

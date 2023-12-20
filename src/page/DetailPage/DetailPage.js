@@ -5,10 +5,10 @@ import { Rate } from "antd";
 
 export default function DetailPage() {
   const [detail, setDetail] = useState({});
-  // Lấy tham số từ thanh URL
+  
   let { idPhim } = useParams();
   useEffect(() => {
-    // gọi api lấy chi tiết phim
+    
     https
       .get(`/api/QuanLyPhim/LayThongTinPhim?MaPhim=${idPhim}`)
       .then((result) => {
